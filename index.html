@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="styles/index.css" />
+  <link rel="stylesheet" href="styles/cards.css" />
+  <link rel="stylesheet" href="styles/filter-card.css" />
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/duotone/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+
+  <title>Dealer Equity System</title>
+</head>
+
+<body>
+  <header id="header">
+    <nav id="myNav" class="navbar">
+      <a class="menu-brand" href="/" rel="noopener noreferrer">
+        <img src="./assets/icons/logo.svg" alt="" srcset="" />
+      </a>
+      <div class="menu-toggle">&#9776;</div>
+      <div class="menu-nav">
+        <a class="menu-brand isMenu" href="/" rel="noopener noreferrer">
+          <img src="./assets/logos/nova-logo/Logo Horizontal@2x.png" alt="" srcset="" />
+        </a>
+        <a href="">Home</a>
+        <a href="#servicos">Empresa</a>
+        <a href="#sobre-nos">Software</a>
+        <a href="#depoimentos">Clientes</a>
+      </div>
+
+      <div class="menu-action-nav">
+        <a href="http://">Fale conosco</a>
+        <!-- <select name="" id="">
+            EN
+          </select> -->
+      </div>
+    </nav>
+
+    <div class="hero-banner">
+      <div class="container">
+        <div class="wrapper-text-hero">
+          <h1 class="title text-gradient">A Revolução da <br />informação</h1>
+          <p class="subtitle">
+            Dealer Equity System é a única ferramenta brasileira baseada em
+            inteligência artificial capaz de trazer em poucos clicks várias
+            oportunidades de negócio.
+          </p>
+          <a href="http://">Saber mais</a>
+
+          <!-- EDITAR CARDS NO cards.js -->
+          <div class="wrapper-cards">
+            <h1>
+              O que nossa ferramenta<br />
+              faz por você
+            </h1>
+            <div id="cards-container"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="des">
+      <div class="container">
+        <div class="wrapper-des-title">
+          <h4 class="content-title">Dealer Equity System ⭐💻</h4>
+
+          <div class="wrapper-subtitle">
+            <p class="content-subtitle">
+              Conheça a pioneira em
+              <span class="ajust">Datamining Automotiva</span> no Brasil
+            </p>
+          </div>
+          <div class="wrapper-subtitle">
+            <p class="content-text">
+              Dealer Equity System é a única ferramenta brasileira baseada em
+              inteligência artificial capaz de trazer em poucos clicks várias
+              oportunidades de negócios. DES automaticamente identifica
+              compradores em posição de compra, diminuindo drasticamente o
+              ciclo de compra. Utilizamos o banco de dados da empresa e
+              transformamos em negócios unindo de maneira única todas as
+              plataformas de uma concessionária; DMS, CRM, Leads, showroom de
+              vendas, workflow gerencial unificando todas ferramentas em
+              somente uma (Dealer Equity System) para uma experiência única e
+              optimizando resultados em tempo real.
+            </p>
+          </div>
+        </div>
+
+        <div class="des-mining">
+          <div class="des-mining-text-wrapper">
+            <p class="content-title">Equity Mining – CXM GEN</p>
+            <span>
+              Eleve sua empresa usando a Inteligência Artificial ao seu favor
+            </span>
+            <div class="content-text-decoration">
+              <p>
+                Dealer Equity System unifica todos bancos de dados para um
+                acompanhamento em tempo real de vendas e serviços, usando a
+                inteligência artificial, analisando e identificando os
+                hábitos, costumes de negócios de todos os seus clientes,
+                potencializando assim um ganho substencial de receita e
+                fidelização do seu ATIVO mais importante, o cliente.
+              </p>
+            </div>
+          </div>
+          <div class="action-des-mining">
+            <a href="">Quer saber mais ?</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="building-future">
+      <div class="container">
+        <div class="building-title">
+          <h4 class="content-title">Building Future 🚀</h4>
+          <p class="content-subtitle">O que nós fazemos</p>
+        </div>
+
+        <div class="building-content-wrapper">
+          <div class="sidebar">
+            <div class="filter-card" onclick="changeContent(0)">
+              <p>Gestão 💼</p>
+              <span>União de várias plataformas em uma única
+                ferramenta</span>
+            </div>
+            <div class="filter-card" onclick="changeContent(1)">
+              <p>Oportunidades 🚀</p><span>Oportunidade real de novos negócios
+                diariamente</span>
+            </div>
+            <div class="filter-card" onclick="changeContent(2)">
+              <p>Gerenciamento ⚙</p>
+              <span>Dashboard dinâmico para visualização 
+                de oportunidades</span>
+            </div>
+            <div class="filter-card" onclick="changeContent(3)">
+              <p>Inteligência Artificial 🤖</p>
+              <span>Identifica os melhores clientes 
+                potenciai</span></div>
+            <div class="filter-card" onclick="changeContent(4)">
+              <p>Retorno Financeiro 💰</p>
+              <span>Gerenciamento de dados dos 
+                financiamentos</span>
+            </div>
+            <div class="filter-card" onclick="changeContent(5)">
+              <p>Priorização dos Clientes ⭐</p>
+              <span>Categorização e ranking, definindo o 
+                score dos clientes</span>
+            </div>
+          </div>
+          <div class="content-filter-card">
+            <div id="content-0" class="content-item">
+              <h2>União de várias plataformas em uma única ferramenta</h2>
+              <p>
+                Integrar diversas plataformas em uma única ferramenta é uma estratégia poderosa para aumentar a
+                eficiência e melhorar a gestão de processos.
+                <br /><br />
+                Essa abordagem permite centralizar informações, reduzir a redundância e facilitar a comunicação entre
+                diferentes sistemas. Ao consolidar funcionalidades de plataformas distintas em um só lugar, as
+                organizações podem melhorar a tomada de decisões, economizar tempo e recursos, além de proporcionar uma
+                experiência mais coesa e integrada para os usuários.
+                <br /><br />
+                Essa unificação pode se traduzir em uma ferramenta robusta e versátil, capaz de atender às demandas
+                complexas do ambiente corporativo moderno.
+              </p>
+            </div>
+            <div id="content-1" class="content-item" style="display: none;">
+              <h2>Oportunidade real de novos negócios diariamente</h2>
+              <p>Explorar novas oportunidades de negócios diariamente é crucial para o crescimento e sustentabilidade de
+                qualquer empresa...</p>
+            </div>
+            <div id="content-2" class="content-item" style="display: none;">
+              <h2>Dashboard dinâmico para visualização de oportunidades</h2>
+              <p>Um dashboard dinâmico é uma ferramenta essencial para visualizar e monitorar oportunidades de negócios
+                em tempo real...</p>
+            </div>
+            <div id="content-3" class="content-item" style="display: none;">
+              <h2>Identifica os melhores clientes potenciais</h2>
+              <p>O uso de inteligência artificial para identificar os melhores clientes potenciais pode aumentar
+                significativamente as chances de sucesso...</p>
+            </div>
+            <div id="content-4" class="content-item" style="display: none;">
+              <h2>Gerenciamento de dados dos financiamentos</h2>
+              <p>A gestão eficiente dos dados de financiamento é fundamental para garantir o retorno financeiro adequado
+                em qualquer operação...</p>
+            </div>
+            <div id="content-5" class="content-item" style="display: none;">
+              <h2>Categorização e ranking, definindo o score dos clientes</h2>
+              <p>Classificar e ranquear clientes é uma prática essencial para definir estratégias de priorização e
+                alocação de recursos de vendas...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="real-results">
+      <div class="container">
+        <div class="building-title">
+          <h4 class="content-title">Resultados reais ✅</h4>
+          <p class="content-subtitle">Empresas que contam com a
+            Dealer Equity System</p>
+        </div>
+
+        <div class="real-results-content-wrapper">
+          <div class="wrapper-img-logos">
+            <img src="./assets/icons/logo.svg" alt="">
+            <img src="./assets/icons/logo.svg" alt="">
+            <img src="./assets/icons/logo.svg" alt="">
+            <img src="./assets/icons/logo.svg" alt="">
+            <img src="./assets/icons/logo.svg" alt="">
+            <img src="./assets/icons/logo.svg" alt="">
+            <img src="./assets/icons/logo.svg" alt="">
+            <img src="./assets/icons/logo.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer">
+    <div class="container">
+      <div data-aos="fade-up" class="wrapper-footer">
+        <div class="wrapper-footer-logo">
+          <img src="assets/icons/logo.svg" alt="logo com iniciais da luciana (lm) e o texto: desenvolvimento humano" />
+          <div class="wrapper-icons"></div>
+          <p> 2024 © Dealer Equity System </a>
+        </div>
+
+        <div class="wrapper-footer-column">
+          <h3 class="title-footer">Links úteis</h3>
+          <ul>
+            <li>
+              <a href="#header"> Software</a>
+            </li>
+            <li>
+              <a href="#sobre-nos"> Clientes</a>
+            </li>
+            <li>
+              <a href="#servicos"> Contato</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="wrapper-footer-column">
+          <h3 class="title-footer">Outros</h3>
+          <ul>
+            <li>
+              <a href="#header">Matriz: CampinasInício</a>
+            </li>
+            <li>
+              <a href="#sobre-nos"> Filiais: São Paulo </a>
+            </li>
+            <li>
+              <a href="#servicos"> Filiais: Rio de Janeiro</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="wrapper-footer-column">
+          <h3 class="title-footer">Fale Conosco</h3>
+          <ul>
+            <li>
+              <a href="tel:+551920423182"><i class="fas fa-phone"></i> Fixo: +55 19 2042-3182</a>
+            </li>
+            <li>
+              <a href="tel:+5521976210606"><i class="fas fa-phone"></i> RJ: +55 21 97621 0606</a>
+            </li>
+            <li>
+              <a href="mailto:comercial @dealerrquitysystem.com"><i class="fas fa-envelope"></i> comercial
+                @dealerrquitysystem.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/cards.js"></script>
+  <script src="js/filter-card.js"></script>
+</body>
+
+</html>

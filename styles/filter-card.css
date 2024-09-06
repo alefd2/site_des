@@ -1,0 +1,71 @@
+.building-content-wrapper {
+  display: flex;
+  width: 100%;
+
+  margin-top: 60px;
+}
+
+.sidebar {
+  width: 30%;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  border-radius: 20px;
+}
+
+.filter-card {
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 2px solid #403f7d00;
+  transition: background-color 0.3s ease;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+.filter-card span {
+  font-weight: 600;
+}
+
+.filter-card:hover {
+  background: linear-gradient(135deg, #41407e15, #1a0844);
+  border: 2px solid #403f7d;
+}
+
+.filter-card.active {
+  background: linear-gradient(135deg, #41407e15, #1a0844);
+  border: 2px solid #403f7d;
+}
+
+.content-item.active {
+  display: block;
+}
+
+.content-filter-card {
+  width: 70%;
+  padding: 40px;
+  border-radius: 20px;
+
+  background-color: rgba(77, 25, 149, 0.05);
+  backdrop-filter: blur(10px);
+  border: 2px solid #41407e;
+}
+
+.content-item {
+  display: none;
+}
+
+.content-item h2 {
+  margin: 0 20px 20px 0;
+  color: #ff4466;
+}
+
+.content-item p {
+  color: #fff;
+  line-height: 28px;
+  font-size: 22px;
+}
