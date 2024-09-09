@@ -21,3 +21,14 @@ function handleScroll() {
 }
 
 window.addEventListener("scroll", handleScroll);
+
+// Fecha o modal ao clicar em um item da navegação
+document.querySelectorAll(".menu-nav a").forEach(function (link) {
+  link.addEventListener("click", function () {
+    var menuNav = document.querySelector(".menu-nav");
+    var body = document.body;
+
+    menuNav.classList.remove("active");
+    body.style.overflowY = "auto";
+  });
+});
