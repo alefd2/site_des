@@ -13,7 +13,7 @@
   --primary-color: #e24072;
   --secondary-color: #11011e;
   --secondary-color-transparent: rgba(53, 4, 121, 0.075);
-  --primary-color-dark: #e24072;
+  --primary-color-dark: #2a153dbe;
   --secondary-color-light: #3ddfee;
   --text-title-color: #727376;
   --text-content-color: #f9f9f9;
@@ -165,10 +165,12 @@ nav {
   gap: 20px;
 }
 
-nav.translucent {
-  background: rgba(36, 3, 184, 0);
-  backdrop-filter: blur(10px);
-  transition: background 0.3s ease;
+@media (min-width: 768px) {
+  nav.translucent {
+    background: rgba(36, 3, 184, 0);
+    backdrop-filter: blur(10px);
+    transition: background 0.3s ease;
+  }
 }
 
 @media (max-width: 768px) {
@@ -204,6 +206,7 @@ nav.translucent {
 .menu-nav {
   display: flex;
   flex-wrap: wrap;
+  color: white;
 }
 
 .menu-nav.active {
@@ -216,7 +219,7 @@ nav.translucent {
 
 .menu-nav a {
   padding: 10px 20px;
-  color: #fff;
+  color: white;
   text-decoration: none;
   display: block;
   padding: 10px;
@@ -225,7 +228,7 @@ nav.translucent {
 }
 
 .menu-nav a:hover {
-  color: var(--primary-color);
+  color: white;
   background-color: #8d8d8d13;
   border-radius: 5px;
 }
@@ -283,7 +286,7 @@ nav.translucent {
 
   .menu-nav a {
     padding: 10px 20px;
-    color: #742b2b;
+    color: white;
     text-decoration: none;
     display: block;
     font-weight: 800;
@@ -591,6 +594,18 @@ section#real-results .building-title p {
   box-shadow: 0 4px 12px rgba(255, 255, 255, 0.11);
 }
 
+@media (max-width: 1326px) {
+}
+
+@media (max-width: 550px) {
+  .sidebar {
+    width: 100% !important;
+  }
+  .content-filter-card {
+    display: none;
+  }
+}
+
 /* ================== FOOTER ========== */
 
 footer#footer {
@@ -604,7 +619,7 @@ footer#footer {
   align-items: flex-start;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 100px 40px;
+  padding: 100px 0px;
   gap: 30px;
 }
 
@@ -665,8 +680,22 @@ footer#footer .wrapper-footer .wrapper-footer-column a {
 }
 
 @media (max-width: 550px) {
+  footer#footer .wrapper-footer .wrapper-footer-logo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+    color: white;
+  }
+
+  footer#footer .wrapper-footer .wrapper-footer-logo p {
+    width: 100%;
+  }
+
   footer#footer .wrapper-footer .wrapper-footer-logo img {
-    width: 105px;
+    width: 150px;
   }
 
   .wrapper-footer {

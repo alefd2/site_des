@@ -30,7 +30,7 @@
       <div class="menu-toggle">&#9776;</div>
       <div class="menu-nav">
         <a class="menu-brand isMenu" href="/" rel="noopener noreferrer">
-          <img src="./assets/logos/nova-logo/Logo Horizontal@2x.png" alt="" srcset="" />
+          <img src="./assets/icons/logo.svg" alt="" srcset="" />
         </a>
         <a href="">Home</a>
         <a href="#servicos">Empresa</a>
@@ -46,7 +46,10 @@
       </div>
     </nav>
 
-    <div class="hero-banner">
+    <div class="hero-banner"
+    data-aos="fade-up"
+    data-aos-duration="2000"
+    >
       <div class="container">
         <div class="wrapper-text-hero">
           <h1 class="title text-gradient">A Revolução da <br />informação</h1>
@@ -290,11 +293,17 @@
   </footer>
 
   <!-- Scripts -->
+  <script>
+    AOS.init({
+      duration: 1000,
+    });
+  </script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script src="js/main.js"></script>
   <script src="js/cards.js"></script>
   <script src="js/filter-card.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 </body>
 
 </html>
