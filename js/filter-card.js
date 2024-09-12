@@ -1,3 +1,7 @@
+let intervalId;
+let progressBarIntervalId;
+let currentIndex = 0;
+
 function initializeContent() {
   const contents = document.querySelectorAll(".content-item");
   const cards = document.querySelectorAll(".filter-card");
@@ -5,6 +9,7 @@ function initializeContent() {
   contents[0].style.display = "block";
   contents[0].classList.add("active");
   cards[0].classList.add("active");
+  currentIndex = 0; // Inicia com o índice 0
 }
 
 function changeContent(index) {
@@ -15,7 +20,6 @@ function changeContent(index) {
     content.style.display = i === index ? "block" : "none";
     content.classList.toggle("active", i === index);
 
-    // Reset the progress bar in the content that is being displayed
     if (i === index) {
       const progressBar = content.querySelector(".progress-bar");
       if (progressBar) {
@@ -25,23 +29,29 @@ function changeContent(index) {
   });
 
   cards.forEach((card, i) => {
-    card.classList.toggle("active", i === index);
+    if (i === index) {
+      card.classList.add("active");
+    } else {
+      card.classList.remove("active");
+    }
   });
+
+  currentIndex = index;
 }
 
-let intervalId;
-let progressBarIntervalId;
-
-function autoChangeContent(interval) {
-  const contents = document.querySelectorAll(".content-item");
-  let currentIndex = 0;
-
+function restartAutoChangeContent(interval) {
   if (intervalId) {
     clearInterval(intervalId);
   }
   if (progressBarIntervalId) {
     clearInterval(progressBarIntervalId);
   }
+
+  autoChangeContent(interval);
+}
+
+function autoChangeContent(interval) {
+  const contents = document.querySelectorAll(".content-item");
 
   intervalId = setInterval(() => {
     changeContent(currentIndex);
@@ -73,6 +83,13 @@ function autoChangeContent(interval) {
 document.addEventListener("DOMContentLoaded", () => {
   initializeContent();
 
-  const interval = 5000; // Time to display each card
+  const interval = 6000;
   autoChangeContent(interval);
+
+  document.querySelectorAll(".filter-card").forEach((card, index) => {
+    card.addEventListener("click", () => {
+      changeContent(index);
+      restartAutoChangeContent(interval);
+    });
+  });
 });

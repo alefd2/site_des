@@ -45,10 +45,12 @@ body {
 
 section {
   padding: 100px 0;
+  overflow-x: hidden !important;
 }
 
 header {
-  padding-bottom: 200px;
+  margin-bottom: 200px;
+  overflow-x: hidden !important;
 }
 
 p,
@@ -127,12 +129,16 @@ button {
     font-size: 18px;
   }
 
+  .content-text {
+    font-size: 16px !important;
+  }
+
   .content-title {
-    font-size: 16px;
+    font-size: 16px !important;
   }
 
   .content-subtitle {
-    font-size: 10px;
+    font-size: 28px !important;
   }
 }
 
@@ -143,6 +149,7 @@ button {
   max-width: 100rem !important;
   padding: 0 5% !important;
   margin: 0 auto;
+  overflow: hidden !important;
 
   @media screen and (max-width: 768px) {
     max-width: 100% !important;
@@ -410,6 +417,7 @@ nav {
 }
 
 .wrapper-des-title {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -473,6 +481,7 @@ nav {
 
   transition: 0.9 cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+
 .des-mining:hover {
   transform: scale(1.0052);
 }
@@ -545,6 +554,16 @@ nav {
     justify-content: flex-start;
     width: auto;
     display: flex;
+  }
+}
+@media (max-width: 550px) {
+  .wrapper-des-title p span {
+    font-size: 30px;
+  }
+
+  .des-mining-text-wrapper .content-text-decoration p {
+    font-size: 16px;
+    line-height: 26px;
   }
 }
 
