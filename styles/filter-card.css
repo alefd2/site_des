@@ -27,8 +27,11 @@
   gap: 10px;
   flex-direction: column;
 }
+
 .filter-card span {
   font-weight: 600;
+  font-stretch: ultra-expanded;
+  letter-spacing: 1px;
 }
 
 .filter-card:hover {

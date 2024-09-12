@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 40px;
+  -webkit-font-smoothing: antialiased;
 }
 
 .cards-blog {
@@ -42,6 +43,7 @@
 .cards-blog-description {
   font-size: 1rem;
   color: #ffffff;
+  letter-spacing: 1px;
 }
 
 .cards-blog-date {
