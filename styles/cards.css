@@ -1,6 +1,7 @@
 #cards-container {
   display: flex;
   width: 100%;
+  height: auto;
   color: white;
   gap: 20px;
   flex-wrap: wrap;
@@ -10,8 +11,9 @@
 
 .card {
   position: relative;
-  width: 260px;
-  max-width: 360px;
+  width: 310px;
+  max-width: 500px;
+  height: 180px;
   border-radius: 10px;
   overflow: hidden;
   background-color: transparent;
@@ -33,6 +35,7 @@
 .card-content {
   position: relative;
   padding: 15px;
+  height: 100%;
   background-color: #83838327;
   display: flex;
   flex-direction: column;
