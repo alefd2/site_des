@@ -24,10 +24,8 @@ document.addEventListener("DOMContentLoaded", function () {
         const postContentHtml = document.createElement("div");
         postContentHtml.innerHTML = post.content.rendered;
 
-        // Adiciona o título do post ao título da página
         document.title = post.title.rendered + " - Dealer Equity System";
 
-        // Adiciona a imagem destacada do post (featured image) com gradiente
         if (post.featured_media) {
           fetch(
             `https://dealerequitysystem.com/wp-json/wp/v2/media/${post.featured_media}`

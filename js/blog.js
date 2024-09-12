@@ -83,3 +83,34 @@ document.addEventListener("DOMContentLoaded", function () {
     loadPosts();
   });
 });
+
+function showLoadingIndicator() {
+  // Adicione um indicador de carregamento
+  const loadingIndicator = document.createElement("div");
+  loadingIndicator.className = "loading-indicator";
+  loadingIndicator.textContent = "Carregando...";
+  cardsContainer.appendChild(loadingIndicator);
+}
+
+function hideLoadingIndicator() {
+  // Remova o indicador de carregamento
+  const loadingIndicator = document.querySelector(".loading-indicator");
+  if (loadingIndicator) {
+    loadingIndicator.remove();
+  }
+}
+
+function loadPosts() {
+  showLoadingIndicator();
+  const postsToShow = posts.slice(currentIndex, currentIndex + postsPerPage);
+  postsToShow.forEach((post) => {
+    const card = createCard(post);
+    cardsContainer.appendChild(card);
+  });
+  currentIndex += postsPerPage;
+  hideLoadingIndicator();
+
+  if (currentIndex >= posts.length) {
+    loadMoreButton.style.display = "none";
+  }
+}

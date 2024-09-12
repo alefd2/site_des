@@ -172,7 +172,7 @@ button {
 
 .hero-banner {
   padding-top: 250px;
-  height: auto;
+  height: max-content;
   display: flex;
   align-items: center;
   justify-content: center;
