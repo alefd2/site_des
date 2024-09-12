@@ -1,0 +1,106 @@
+/* ================== FOOTER ========== */
+
+footer#footer {
+  height: auto;
+  background-color: rgba(77, 25, 149, 0.05);
+}
+
+.wrapper-footer {
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 100px 0px;
+  gap: 30px;
+}
+
+footer#footer .wrapper-footer .wrapper-footer-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  color: #b1b1b1;
+  gap: 10px;
+}
+
+footer#footer .wrapper-footer .wrapper-footer-logo img {
+  width: 220px;
+}
+
+footer#footer .wrapper-footer .wrapper-footer-logo {
+  display: flex;
+  flex-direction: column;
+}
+
+footer#footer .wrapper-footer .wrapper-footer-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+footer#footer .wrapper-footer .wrapper-footer-column ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+footer#footer .wrapper-footer .wrapper-footer-column h3 {
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--card-text-color);
+}
+footer#footer .wrapper-footer .wrapper-footer-column li {
+  list-style: none;
+}
+
+footer#footer .wrapper-footer .wrapper-footer-column a {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: var(--text-content-color);
+  text-decoration: none;
+  font-weight: 500;
+
+  transition: 0.5s ease;
+
+  &:hover {
+    color: #ffffff9d;
+  }
+}
+
+@media (max-width: 1326px) {
+  footer#footer .wrapper-footer .wrapper-footer-logo img {
+    width: 150px;
+  }
+}
+
+@media (max-width: 550px) {
+  footer#footer .wrapper-footer .wrapper-footer-logo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+    color: white;
+  }
+
+  footer#footer .wrapper-footer .wrapper-footer-logo p {
+    width: 100%;
+  }
+
+  footer#footer .wrapper-footer .wrapper-footer-logo img {
+    width: 150px;
+  }
+
+  .wrapper-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 100px 40px;
+    gap: 30px;
+  }
+}

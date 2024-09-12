@@ -1,0 +1,301 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+:root {
+  /* --primary-color: #f46530; */
+  /* --primary-color-dark: #f74b1c; */
+  --primary-color-light: #e45683be;
+  --primary-color: #e24072;
+  --secondary-color: #11011e;
+  --secondary-color-transparent: rgba(53, 4, 121, 0.075);
+  --primary-color-dark: #2a153dbe;
+  --secondary-color-light: #3ddfee;
+  --text-title-color: #727376;
+  --text-content-color: #f9f9f9;
+  --bg-color: #11011e;
+  --bg-color-transparent: #f4643093;
+  --card-bg-color: #f8f9fa;
+  --card-text-color: #b1b1b1;
+  --black: #000;
+
+  --lg-mobile: 557px;
+  --md-tablet: 768;
+  --sm-desktop: 1024;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  /* background: var(--bg-color); */
+  background: linear-gradient(
+    to bottom,
+    var(--bg-color),
+    #2b0649,
+    #2f084e,
+    #150324
+  );
+  background-size: contain;
+
+  color: white;
+}
+
+main {
+  padding: 200px 0 0 0;
+  overflow-x: hidden !important;
+}
+
+header {
+  /* margin-bottom: 80px; */
+  overflow-x: hidden !important;
+}
+
+p,
+button {
+  margin: 0 !important;
+  padding: 0;
+}
+
+@media (max-width: 701px) {
+  section {
+    padding: 20px 0;
+  }
+}
+
+/* Edit scroll-bar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff;
+  width: 10px !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 20px;
+}
+
+/* sobrecrevo o container do bootstrap */
+
+.container {
+  width: 100% !important;
+  max-width: 100rem !important;
+  padding: 0 5% !important;
+  margin: 0 auto;
+  overflow: hidden !important;
+
+  @media screen and (max-width: 768px) {
+    max-width: 100% !important;
+    padding: 0 5% !important;
+  }
+
+  @media screen and (max-width: 480px) {
+    max-width: 100%;
+    padding: 0 5% !important;
+  }
+}
+
+/* HERO */
+
+#post-header-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+#post-header-image {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.2)
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+#post-header-image .header-text {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  z-index: 1;
+  font-size: 30px;
+}
+
+#post-header-image p {
+  font-size: 16px;
+}
+
+@media (max-width: 760px) {
+  #post-header-image .header-text {
+    width: 100%;
+    font-size: 18px;
+
+    top: 70%;
+    left: 50%;
+  }
+
+  #post-header-image p {
+    font-size: 14px;
+  }
+}
+
+#post-content {
+  padding: 20px;
+  max-width: 1200px;
+  margin: -150px auto 110px;
+  margin-top: -150px;
+  /* background-color: rgb(37, 6, 80); */
+  backdrop-filter: blur(10px);
+  /* border: 2px solid #41407e; */
+  z-index: 1;
+  position: relative;
+  color: white;
+  border-radius: 16px;
+}
+
+/* ======== wordpress content class */
+
+.grid {
+  max-width: 1360px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: grid;
+  grid-gap: 0;
+  text-align: center;
+}
+
+#post-content > h2 {
+  display: none;
+}
+
+#post-content > p {
+  display: none;
+}
+
+/* Estilo para o título principal */
+h2.wp-block-heading {
+  margin: 60px 0;
+  background: -webkit-linear-gradient(
+    rgba(175, 0, 96, 0.863),
+    rgb(163, 0, 128)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 48px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Estilo para o subtítulo */
+h3.wp-block-heading {
+  margin: 60px 0;
+  font-weight: 600;
+  font-size: 36px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+h3.wp-block-heading strong {
+  font-weight: 700;
+}
+
+/* Estilo para listas */
+ul.wp-block-list {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+  unicode-bidi: isolate;
+  text-align: left !important;
+}
+
+ul.wp-block-list li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+  unicode-bidi: isolate;
+  line-height: 30px;
+}
+
+.wp-block-image {
+  margin-top: 40px;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 1200px) {
+  h2.wp-block-heading {
+    font-size: 40px;
+  }
+
+  h3.wp-block-heading {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 992px) {
+  h2.wp-block-heading {
+    font-size: 36px;
+  }
+
+  h3.wp-block-heading {
+    font-size: 28px;
+  }
+
+  ul.wp-block-list {
+    padding-inline-start: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  h2.wp-block-heading {
+    font-size: 32px;
+    margin: 40px 0;
+  }
+
+  h3.wp-block-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  ul.wp-block-list {
+    padding-inline-start: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  h2.wp-block-heading {
+    font-size: 28px;
+    margin: 30px 0;
+  }
+
+  h3.wp-block-heading {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  ul.wp-block-list {
+    padding-inline-start: 15px;
+  }
+}

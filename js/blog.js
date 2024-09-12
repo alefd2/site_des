@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Adiciona o link ao card
     card.addEventListener("click", () => {
-      window.location.href = post.link;
+      window.location.href = `post.html?id=${post.id}`;
     });
 
     const cardContent = document.createElement("div");
