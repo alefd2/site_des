@@ -1,5 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
   const cardsContainer = document.getElementById("cards-blog");
+  const loadMoreButton = document.getElementById("load-more");
+
+  let posts = [];
+  let currentIndex = 0;
+  const postsPerPage = 3;
 
   function createCard(post) {
     const card = document.createElement("div");
@@ -35,6 +40,19 @@ document.addEventListener("DOMContentLoaded", function () {
     return card;
   }
 
+  function loadPosts() {
+    const postsToShow = posts.slice(currentIndex, currentIndex + postsPerPage);
+    postsToShow.forEach((post) => {
+      const card = createCard(post);
+      cardsContainer.appendChild(card);
+    });
+    currentIndex += postsPerPage;
+
+    if (currentIndex >= posts.length) {
+      loadMoreButton.style.display = "none";
+    }
+  }
+
   fetch("https://dealerequitysystem.com/wp-json/wp/v2/posts")
     .then((response) => {
       if (!response.ok) {
@@ -43,21 +61,25 @@ document.addEventListener("DOMContentLoaded", function () {
       return response.json();
     })
     .then((data) => {
-      const filteredData = data.filter(
+      posts = data.filter(
         (post) =>
           post.status === "publish" && post.content.rendered.trim() !== ""
       );
+      posts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-      filteredData.sort((a, b) => new Date(b.date) - new Date(a.date));
+      // Inicialmente carrega 3 posts
+      loadPosts();
 
-      const limitedData = filteredData.slice(0, 3);
-
-      limitedData.forEach((post) => {
-        const card = createCard(post);
-        cardsContainer.appendChild(card);
-      });
+      // Exibe o botão de "Carregar mais posts" se houver mais posts para carregar
+      if (posts.length > postsPerPage) {
+        loadMoreButton.style.display = "block";
+      }
     })
     .catch((error) => {
       console.error("Erro ao buscar os dados:", error);
     });
+
+  loadMoreButton.addEventListener("click", () => {
+    loadPosts();
+  });
 });
