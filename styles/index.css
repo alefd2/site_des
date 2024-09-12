@@ -57,6 +57,12 @@ button {
   padding: 0;
 }
 
+@media (max-width: 701px) {
+  section {
+    padding: 20px 0;
+  }
+}
+
 /* Edit scroll-bar */
 ::-webkit-scrollbar {
   width: 5px;
