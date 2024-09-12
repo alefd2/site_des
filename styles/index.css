@@ -623,6 +623,7 @@ section#real-results .building-title p {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  padding-bottom: 10px;
 }
 
 .real-results-content-wrapper .wrapper-img-logos img {

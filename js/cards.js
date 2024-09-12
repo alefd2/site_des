@@ -4,21 +4,21 @@ var cardsData = [
     title: "Plataforma Unificada",
     description: "União de várias plataformas em uma única ferramenta",
     link: "page/coaching-lideres/",
-    bgImage: "./assets/icons/Half Circle.svg",
+    bgImage: "./assets/icons/conect.png",
   },
   {
     id: "dab4b60a-e3b3-4d35-a662-0c8dcf19a8f1",
     title: "Negócios Diários",
     description: "Oportunidade real de novos negócios diariamente",
     link: "page/coaching-lideres/",
-    bgImage: "./assets/icons/Star Calendar.svg",
+    bgImage: "./assets/icons/star Calendar.png",
   },
   {
     id: "dab4b60a-e3b3-4d35-a662-0c8dcf19a8f1",
     title: "Dashboard Dinâmico",
     description: "Dashboard dinâmico para fácil visualização de oportunidade",
     link: "page/coaching-lideres/",
-    bgImage: "./assets/icons/Dashboard.svg",
+    bgImage: "./assets/icons/dashboard.png",
   },
   {
     id: "dab4b60a-e3b3-4d35-a662-0c8dcf19a8f1",
@@ -26,7 +26,7 @@ var cardsData = [
     description:
       "Fácil de planejar e gerenciar o resulatdo de sua equipe diariamente",
     link: "page/coaching-lideres/",
-    bgImage: "./assets/icons/Calendar Setting.svg",
+    bgImage: "./assets/icons/settings.png",
   },
 ];
 

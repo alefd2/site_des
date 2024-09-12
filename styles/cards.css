@@ -25,13 +25,6 @@
   box-shadow: 0 4px 12px rgba(255, 255, 255, 0.11);
 }
 
-.card-image {
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-  backdrop-filter: grayscale(30%);
-}
-
 .card-content {
   position: relative;
   padding: 15px;
@@ -47,6 +40,13 @@
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.card-image {
+  width: auto;
+  height: 60px;
+  object-fit: cover;
+  /* backdrop-filter: grayscale(30%); */
 }
 
 .card-icon {
