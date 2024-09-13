@@ -24,7 +24,7 @@ var cardsData = [
     id: "dab4b60a-e3b3-4d35-a662-0c8dcf19a8f1",
     title: "Gestão Diária",
     description:
-      "Fácil de planejar e gerenciar o resulatdo de sua equipe diariamente",
+      "Fácil de planejar e gerenciar o resultado de sua equipe diariamente",
     link: "page/coaching-lideres/",
     bgImage: "./assets/icons/settings.png",
   },
