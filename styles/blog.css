@@ -112,14 +112,11 @@ button {
   background: linear-gradient(
     to right,
     rgba(255, 255, 255, 0.849) 60%,
-    #ff0e58 100%
+    var(--secondary-color) 100%
   );
   -webkit-background-clip: text;
   color: transparent;
   text-shadow: 2px 2px 4px rgba(67, 2, 70, 0.185);
-}
-
-@media (max-width: 1326px) {
 }
 
 @media (max-width: 550px) {
@@ -179,7 +176,7 @@ button {
   color: rgb(151, 32, 32);
 
   background: url("../assets/banner/bg1.png");
-  background-size: auto;
+  background-size: 100%;
   background-repeat: no-repeat;
   background-position: top;
   background-blend-mode: exclusion;
