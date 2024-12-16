@@ -48,7 +48,6 @@ document.addEventListener("DOMContentLoaded", function () {
     postContent.appendChild(postContentHtml);
   }
 
-  // Função para buscar e renderizar a imagem
   async function fetchMedia(mediaId) {
     try {
       const response = await fetch(

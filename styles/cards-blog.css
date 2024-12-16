@@ -83,6 +83,9 @@
   .cards-blog-container {
     grid-template-columns: 1fr;
   }
+  .column-main {
+    width: 100%;
+  }
   .column-secondary {
     grid-template-columns: 1fr;
   }
