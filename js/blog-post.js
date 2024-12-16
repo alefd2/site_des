@@ -66,8 +66,9 @@ document.addEventListener("DOMContentLoaded", function () {
       const headerText = document.createElement("div");
       headerText.className = "header-text";
       headerText.innerHTML = `
-        <h2>${media.title.rendered}</h2>
+      <h2>${media.title.rendered.replace(/-/g, " ")}</h2>
       `;
+      console.log(media.title.rendered);
       headerImage.appendChild(headerText);
     } catch (error) {
       console.error("Erro ao buscar a imagem do post:", error);
