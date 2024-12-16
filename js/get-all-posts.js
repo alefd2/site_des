@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let posts = [];
   let currentIndex = 0;
-  const postsPerPage = 3;
+  const postsPerPage = 20;
 
   async function createCard(post) {
     const card = document.createElement("div");
@@ -46,27 +46,22 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   async function loadPosts() {
-    const mainCardContainer = document.getElementById("main-card");
-    const secondaryCardsContainer = document.getElementById("secondary-cards");
-
     showLoadingIndicator();
 
-    const postsToShow = posts.slice(0, 5); // Carrega apenas os 5 primeiros posts
+    const postsToShow = posts.slice(currentIndex, currentIndex + postsPerPage);
 
     for (let i = 0; i < postsToShow.length; i++) {
       const post = postsToShow[i];
       const card = await createCard(post);
-
-      if (i === 0) {
-        // Card mais atual na coluna principal
-        mainCardContainer.appendChild(card);
-      } else {
-        // Cards restantes na segunda coluna (grid de 2 colunas)
-        secondaryCardsContainer.appendChild(card);
-      }
+      cardsContainer.appendChild(card);
     }
 
+    currentIndex += postsPerPage;
     hideLoadingIndicator();
+
+    if (currentIndex >= posts.length) {
+      loadMoreButton.style.display = "none";
+    }
   }
 
   fetch("https://dealerequitysystem.com/wp-json/wp/v2/posts")
@@ -83,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
       );
       posts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-      loadPosts();
+      loadPosts(); // Carrega os primeiros 10 posts
 
       if (posts.length > postsPerPage) {
         loadMoreButton.style.display = "block";
@@ -102,11 +97,11 @@ document.addEventListener("DOMContentLoaded", function () {
           throw new Error("Erro ao buscar imagem: " + response.statusText);
         }
         const media = await response.json();
-        return media.source_url; // Corrigido para retornar a URL correta
+        return media.source_url;
       }
     } catch (error) {
       console.error("Erro ao buscar a imagem do post:", error);
-      return "fallback-image.jpg"; // Retorna uma imagem padrão em caso de erro
+      return "fallback-image.jpg";
     }
   }
 
